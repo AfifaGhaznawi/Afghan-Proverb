@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Afghan Proverbs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #F5F5DC;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background-color: #8B4513;
+      color: white;
+      text-align: center;
+      padding: 30px 20px 20px;
+    }
+
+    header h1 {
+      margin-bottom: 5px;
+    }
+
+    header .quote {
+      font-style: italic;
+      font-size: 1.1em;
+      color: #FFD700;
+    }
+
+    nav {
+      margin-top: 15px;
+    }
+
+    nav a {
+      margin: 0 12px;
+      color: #FFD700;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    h2 {
+      color: #8B4513;
+      margin-bottom: 10px;
+    }
+
+    .intro p {
+      max-width: 700px;
+      margin: 0 auto 20px;
+      line-height: 1.6;
+    }
+
+    .intro input {
+      padding: 10px;
+      width: 60%;
+      max-width: 300px;
+      margin-bottom: 30px;
+    }
+
+    .proverb-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .proverb-card {
+      background-color: #fff8dc;
+      border: 1px solid #ccc;
+      padding: 15px;
+      font-family: 'Noto Serif', serif;
+      transition: all 0.3s ease;
+    }
+
+    .proverb-card:hover {
+      transform: scale(1.03);
+      background-color: #fef0c9;
+    }
+
+    .meaning {
+      font-size: 0.9em;
+      color: #555;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      margin-top: 10px;
+    }
+
+    .proverb-card:hover .meaning {
+      opacity: 1;
+    }
+
+    .dari {
+      font-size: 1.3em;
+      font-weight: bold;
+      text-align: right;
+      direction: rtl;
+    }
+
+    .english {
+      font-style: italic;
+      color: #555;
+      margin-top: 10px;
+    }
+
+    .reflection-box {
+      background-color: #fff3d1;
+      border-left: 5px solid #DAA520;
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 20px;
+      font-style: italic;
+      font-size: 1.1em;
+      text-align: left;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 400px;
+      margin: auto;
+    }
+
+    form input, form textarea {
+      margin-bottom: 15px;
+      width: 100%;
+      padding: 10px;
+      font-family: Arial, sans-serif;
+    }
+
+    form button {
+      background-color: #DAA520;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #c99a00;
+    }
+
+    .about-box {
+      background-color: #f1e2c6;
+      border: 1px solid #ddd;
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 25px;
+      line-height: 1.6;
+    }
+
+    footer {
+      background-color: #8B4513;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .social-icons {
+      margin-top: 10px;
+    }
+
+    .social-icons a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: #FFD700;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Afghan Proverbs</h1>
+    <p class="quote">"Words of wisdom passed through generations."</p>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#gallery">Proverb Gallery</a>
+      <a href="#detail">Proverb of the Day</a>
+      <a href="#wall">Interactive Wall</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <!-- Welcome Section -->
+  <section id="home" class="intro">
+    <h2>Welcome to Afghan Proverbs</h2>
+    <p>
+      Afghan proverbs reflect the wisdom, humor, and culture of our people. Handed down from one generation to another, these sayings teach life lessons with poetic simplicity and deep meaning.
+    </p>
+    <h2>Feature Proverb</h2>
+    <div class="proverb-grid">
+      <div class="proverb-card">
+        <p class="dari">صبر تلخ است ولی میوه‌اش شیرین است</p>
+        <p class="english">Patience is bitter, but its fruit is sweet.</p>
+      </div>
+      <div class="proverb-card">
+        <p class="dari">تا مرد سخن نگفته باشد، عیب و هنرش نهفته باشد</p>
+        <p class="english">Until a man speaks, his flaws and virtues remain hidden.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery">
+    <h2>Proverb Gallery</h2>
+    <div class="proverb-grid">
+      <div class="proverb-card">
+        <p class="dari">هر که بامش بیش، برفش بیشتر</p>
+        <p class="english">The higher the roof, the more snow it gathers.</p>
+        <div class="meaning">More power brings more responsibility.</div>
+      </div>
+      <div class="proverb-card">
+        <p class="dari">آب که یک جا بماند، می‌گندد</p>
+        <p class="english">Water that stays in one place, rots.</p>
+        <div class="meaning">Without motion, life decays.</div>
+      </div>
+      <div class="proverb-card">
+        <p class="dari">گدایی که سرافراز است، پادشاه است</p>
+        <p class="english">A proud beggar is a king.</p>
+        <div class="meaning">Dignity is more valuable than wealth.</div>
+      </div>
+      <div class="proverb-card">
+        <p class="dari">نخند که بلایت نیامده</p>
+        <p class="english">Don’t laugh until misfortune hits you.</p>
+        <div class="meaning">Do not mock others—you may face the same.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Proverb of the Day -->
+  <section id="detail">
+    <h2>Proverb of the Day</h2>
+    <p class="dari">هر که بامش بیش، برفش بیشتر</p>
+    <p class="english">The higher the roof, the more snow it gathers.</p>
+    <div class="reflection-box">
+      This proverb teaches us that with more wealth, power, or status comes greater responsibility and stress. It reminds us not to envy others blindly and to be aware of the hidden burdens success might carry.
+    </div>
+  </section>
+
+  <!-- Interactive Wall -->
+  <section id="wall">
+    <h2>Interactive Wall</h2>
+    <p>Share your favorite Afghan proverb and help preserve our cultural heritage.</p>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <textarea rows="4" placeholder="Your Favorite Proverb (Dari or English)" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About</h2>
+    <div class="about-box">
+      <p>
+        This website is a student project created to celebrate the rich oral tradition of Afghanistan through proverbs. It aims to showcase the timeless wisdom found in our everyday expressions, keeping the culture alive for future generations.
+      </p>
+      <p>
+        Afifa Ghaznawi is a passionate advocate for Afghan culture and education. As a native of Afghanistan, Afifa is dedicated to preserving Afghan traditions and sharing them with the world. She is a multilingual educator, fluent in English, Persian, Urdu, and Turkish. Afifa has been helping students both inside Afghanistan and abroad, especially Afghan girls, to achieve their goals despite the challenges they face.
+      </p>
+      <p>
+        Afifa is also involved in various projects, including offering private English lessons and contributing to educational initiatives for underprivileged communities. Her background in teaching and commitment to empowering others are reflected in the content of this website.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Afghan Proverbs | Designed with cultural pride | Made by Afifa Ghaznawi</p>
+    <div class="social-icons">
+      <a href="https://x.com/afifa_ghaznawi?s=21" target="_blank" title="X (Twitter)">
+        <i class="fab fa-x-twitter fa-lg"></i>
+      </a>
+      <a href="https://linkedin.com/in/afifa-ghaznawi-2729622a4" target="_blank" title="LinkedIn">
+        <i class="fab fa-linkedin fa-lg"></i>
+      </a>
+      <a href="https://github.com/AfifaGhaznawi" target="_blank" title="GitHub">
+        <i class="fab fa-github fa-lg"></i>
+      </a>
+      <a href="mailto:ghaznawiafifa786@gmail.com" title="Gmail">
+        <i class="fas fa-envelope fa-lg"></i>
+      </a>
+    </div>
+  </footer>
+
+</body>
+</html>
